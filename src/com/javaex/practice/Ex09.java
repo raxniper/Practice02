@@ -9,16 +9,29 @@ public class Ex09 {
 		
 		int num1;
 		int num2;
+		int bigNum;
+		int smallNum;
 		
-		System.out.print("기준점인 수 : ");
+		System.out.println("숫자2개를 입력해주세요");
+		System.out.print("첫번째 숫자 : ");
 		num1 = sc.nextInt();
-		System.out.print("약수확인 수 : ");
+		System.out.print("두번째 숫자 : ");
 		num2 = sc.nextInt();
 		
-		if ((num1%num2)==0) {
-			System.out.println(num2+"는(은) "+num1+" 의 약수입니다.");
+		
+		if (num1 >= num2) {
+			bigNum = num1;
+			smallNum = num2; 
 		} else {
-			System.out.println(num2+"는(은) "+num1+" 의 약수가 아닙니다.");
+			bigNum = num2;
+			smallNum = num1;
+		}
+		
+		
+		if ((bigNum%smallNum)==0) {
+			System.out.println(smallNum+"는(은) "+bigNum+"의 약수입니다.");
+		} else {
+			System.out.println(smallNum+"는(은) "+bigNum+"의 약수가 아닙니다.");
 		}
 		
 		sc.close();
